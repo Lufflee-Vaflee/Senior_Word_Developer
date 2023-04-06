@@ -230,7 +230,6 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format lcid="">%RefOrder%</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -243,7 +242,6 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -256,7 +254,6 @@
         <column id="1">
           <halign>left</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -269,7 +266,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -283,7 +279,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -297,7 +292,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -311,7 +305,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -325,7 +318,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -339,7 +331,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -353,7 +344,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -367,7 +357,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -381,7 +370,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -397,7 +385,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -411,7 +398,6 @@
         <column id="1">
           <halign>center</halign>
           <valign>top</valign>
-          <format lcid="">{%RefOrder%.}</format>
         </column>
         <column id="2">
           <halign>left</halign>
@@ -1125,21 +1111,6 @@
           <xsl:value-of select="msxsl:node-set($data)/bibliography/source[@type = $sourcetype]/column[@id = $columnId]/format[@lcid = $lcid]"/>
         </xsl:when>
         <!-- Else display error message. -->
-        <xsl:otherwise>
-          <xsl:if test="msxsl:node-set($data)/general/display_errors = 'yes'">
-            <xsl:text>&lt;b&gt;Unsupported </xsl:text>
-            <xsl:if test="string-length($type) > 0">
-              <xsl:text>type (</xsl:text>
-              <xsl:value-of select="$type"/>
-              <xsl:text>) and </xsl:text>
-            </xsl:if>
-            <xsl:text>source type (</xsl:text>
-            <xsl:value-of select="$sourcetype"/>
-            <xsl:text>) for source </xsl:text>
-            <xsl:value-of select="./b:Tag"/>
-            <xsl:text>.&lt;/b&gt;</xsl:text>
-          </xsl:if>
-        </xsl:otherwise>
       </xsl:choose>
 
     </xsl:variable>
